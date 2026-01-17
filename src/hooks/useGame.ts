@@ -31,6 +31,24 @@ export function useGame() {
     return success;
   }, [gameState]);
 
+  const undoMultipleMoves = useCallback((count: number): boolean => {
+    const newState = gameState.clone();
+    let success = true;
+
+    for (let i = 0; i < count; i++) {
+      if (!newState.undoMove()) {
+        success = false;
+        break;
+      }
+    }
+
+    if (success) {
+      setGameState(newState);
+    }
+
+    return success;
+  }, [gameState]);
+
   const resetGame = useCallback(() => {
     setGameState(new GameState());
   }, []);
@@ -43,6 +61,7 @@ export function useGame() {
     gameState: getGameData(),
     makeMove,
     undoMove,
+    undoMultipleMoves,
     resetGame,
     gameStateObj: gameState,
   };
