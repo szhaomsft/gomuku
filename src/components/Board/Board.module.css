@@ -1,0 +1,57 @@
+.board {
+  display: inline-block;
+  background-color: #daa520;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.row {
+  display: flex;
+}
+
+.cell {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #8b6914;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.2s;
+}
+
+.cell:hover {
+  background-color: rgba(139, 105, 20, 0.1);
+}
+
+.stone {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s;
+}
+
+.black {
+  background: radial-gradient(circle at 30% 30%, #555, #000);
+}
+
+.white {
+  background: radial-gradient(circle at 30% 30%, #fff, #ccc);
+}
+
+.winning {
+  animation: pulse 1s infinite;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}

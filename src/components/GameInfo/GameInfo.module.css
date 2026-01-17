@@ -1,0 +1,50 @@
+.gameInfo {
+  margin: 20px 0;
+  padding: 15px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  text-align: center;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.currentPlayer {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.winner {
+  font-size: 24px;
+  font-weight: bold;
+  color: #4caf50;
+  animation: slideIn 0.5s ease-out;
+}
+
+.thinking {
+  font-size: 18px;
+  color: #ff9800;
+  animation: blink 1s infinite;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}

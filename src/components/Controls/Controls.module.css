@@ -1,0 +1,169 @@
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.button {
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.button:disabled {
+  background: linear-gradient(135deg, #ccc 0%, #999 100%);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.modeGroup {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 25px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.modeLabel {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.modeButtons {
+  display: flex;
+  gap: 10px;
+}
+
+.modeButton {
+  padding: 8px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #666;
+  background: white;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.modeButton:hover:not(:disabled) {
+  border-color: #667eea;
+  color: #667eea;
+  transform: translateY(-1px);
+}
+
+.modeButton.active {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+  border-color: transparent;
+}
+
+.modeButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.difficultyGroup {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 25px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.difficultyLabel {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.difficultyButtons {
+  display: flex;
+  gap: 10px;
+}
+
+.difficultyButton {
+  padding: 8px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #666;
+  background: white;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.difficultyButton:hover:not(:disabled) {
+  border-color: #667eea;
+  color: #667eea;
+  transform: translateY(-1px);
+}
+
+.difficultyButton.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-color: transparent;
+}
+
+.difficultyButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.aiVsAiGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 15px 25px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.aiDifficultyRow {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.aiLabel {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  min-width: 80px;
+}
+
+.smallButton {
+  padding: 6px 15px;
+  font-size: 13px;
+}
